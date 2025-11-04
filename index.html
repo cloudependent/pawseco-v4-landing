@@ -3,187 +3,107 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PawsEco — AI‑powered POS + Services + Automations for Pet Businesses</title>
-  <meta name="description" content="PawsEco brings AI and powerful automations to independent pet businesses — POS, bookings, staff scheduling, inventory, loyalty, and a marketplace. Proven in the field for 4+ years; now launching the latest upgrade." />
-  <meta property="og:title" content="PawsEco — POS + Services + Marketplace" />
-  <meta property="og:description" content="AI‑powered POS + Services + Automations for pet retailers, groomers, daycare & walkers. Proven 4+ years; latest upgrade now open for early access." />
+  <title>PawsEco — AI‑powered POS + Services + Automations</title>
+  <meta name="description" content="PawsEco gives independents big‑brand superpowers: AI, automations, POS, bookings, forms & portals, rostering, and document management — proven for 4+ years." />
+  <link rel="canonical" href="https://pawseco.com.au/" />
+  <meta property="og:title" content="PawsEco — AI‑powered POS + Services + Automations" />
+  <meta property="og:description" content="Run pet retail & services with confidence. AI + automations for independents. Proven in the field 4+ years." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://dummyimage.com/1200x630/0ea5e9/ffffff&text=PawsEco" />
-  <meta property="og:url" content="https://pawsV4.pawseco.com.au/" />
-  <link rel="canonical" href="https://pawsV4.pawseco.com.au/">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" href="/favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta property="og:image" content="https://dummyimage.com/1200x630/16a34a/ffffff&text=PawsEco" />
+  <meta property="og:url" content="https://pawseco.com.au/" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="manifest" href="/site.webmanifest" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root { --brand:#0ea5e9; --brand-dark:#0284c7; --ink:#0f172a; }
-    html,body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;color:#0b1220;background:#0b1220;}
-    .glass{backdrop-filter:saturate(180%) blur(14px); background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14)}
-    .card{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12)}
-    .shadow-soft{box-shadow:0 10px 30px rgba(0,0,0,.35)}
-    .ring-brand{box-shadow:0 0 0 6px rgba(14,165,233,.15)}
+    :root{
+      --brand:#16a34a;      /* green-600 */
+      --brand-500:#22c55e;  /* green-500 */
+      --brand-700:#15803d;  /* green-700 */
+      --ink:#0b1220;
+      --bg:#f6f8f7;         /* light background */
+    }
+    html,body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;background:var(--bg);color:#0f172a}
+    .glass{backdrop-filter:saturate(160%) blur(12px); background:rgba(255,255,255,.7); border:1px solid rgba(15,23,42,.08)}
+    .card{background:white; border:1px solid rgba(15,23,42,.08)}
+    .shadow-soft{box-shadow:0 10px 30px rgba(2,6,23,.08)}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:14px;padding:.8rem 1.1rem;font-weight:600}
+    .btn-primary{background:var(--brand);color:#fff}
+    .btn-primary:hover{background:var(--brand-700)}
+    .btn-ghost{border:1px solid rgba(15,23,42,.12)}
+    .badge{display:inline-flex;align-items:center;gap:.35rem;font-size:.72rem;padding:.35rem .6rem;border-radius:999px;background:rgba(22,163,74,.1);color:var(--brand-700);border:1px solid rgba(22,163,74,.25)}
   </style>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["Organization","SoftwareApplication"],
-  "name": "PawsEco",
-  "url": "https://pawsV4.pawseco.com.au/",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Web, Android, iOS",
-  "description": "PawsEco brings AI and powerful automations to independent pet businesses — POS, bookings, staff scheduling, inventory, loyalty, forms, portals and more.",
-  "email": "mailto:hello@pawseco.com.au",
-  "sameAs": [
-    "https://github.com/cloudependent"
-  ]
-}
-</script>
 </head>
-<body class="bg-slate-950">
+<body>
   <!-- Header -->
-  <header class="fixed inset-x-0 top-0 z-50">
+  <header class="sticky top-0 z-50 bg-white/70 backdrop-blur">
     <div class="mx-auto max-w-7xl px-5">
-      <nav class="glass mt-4 flex items-center justify-between rounded-2xl px-5 py-3 shadow-soft">
+      <nav class="flex items-center justify-between py-4">
         <a href="#top" class="flex items-center gap-3 group">
-          <div class="h-9 w-9 rounded-2xl bg-cyan-500 grid place-items-center text-white font-black group-hover:scale-95 transition">
-            <span>PE</span>
-          </div>
-          <div class="text-white">
-            <div class="text-lg font-extrabold tracking-tight">PawsEco</div>
-            <div class="text-xs opacity-70">POS • Services • Marketplace</div>
+          <div class="h-9 w-9 rounded-2xl grid place-items-center text-white font-black" style="background:linear-gradient(135deg,var(--brand),var(--brand-500))">PE</div>
+          <div>
+            <div class="text-xl font-extrabold tracking-tight">PawsEco</div>
+            <div class="text-xs text-slate-500">POS • Services • Automations</div>
           </div>
         </a>
-        <div class="hidden md:flex items-center gap-6 text-slate-200">
-          <a href="#features" class="hover:text-white">Features</a>
-          <a href="#ai" class="hover:text-white">AI</a>
-          <a href="#forms" class="hover:text-white">Forms & Portals</a>
-          <a href="#devices" class="hover:text-white">Web & Mobile</a>
-          <a href="#how" class="hover:text-white">How it works</a>
-          <a href="#who" class="hover:text-white">Who it's for</a>
-          <a href="#security" class="hover:text-white">Security</a>
-          <a href="#register" class="hover:text-white">Register</a>
+        <div class="hidden md:flex items-center gap-6 text-slate-700">
+          <a href="#features" class="hover:text-black">Features</a>
+          <a href="#ai" class="hover:text-black">AI</a>
+          <a href="#forms" class="hover:text-black">Forms & Portals</a>
+          <a href="#devices" class="hover:text-black">Web & Mobile</a>
+          <a href="#compliance" class="hover:text-black">Staff & Compliance</a>
+          <a href="#register" class="hover:text-black">Register</a>
         </div>
-        <a href="#register" class="inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-4 py-2 font-semibold text-white hover:bg-cyan-400 active:bg-cyan-600 transition">
-          Join waitlist
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
+        <a href="#register" class="btn btn-primary shadow-soft">Join waitlist</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section id="top" class="relative overflow-hidden">
-    <div class="absolute inset-0 -z-10 opacity-30" aria-hidden="true">
-      <svg class="w-[1600px] h-[1600px] -translate-x-1/3 -translate-y-1/3" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <radialGradient id="g" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#22d3ee"/>
-            <stop offset="50%" stop-color="#0ea5e9"/>
-            <stop offset="100%" stop-color="#6366f1"/>
-          </radialGradient>
-        </defs>
-        <circle cx="400" cy="400" r="400" fill="url(#g)"/>
-      </svg>
-    </div>
-    <div class="mx-auto max-w-7xl px-5 pt-32 pb-20 md:pt-40">
+  <section id="top" class="relative">
+    <div class="mx-auto max-w-7xl px-5 pt-14 pb-16">
       <div class="grid items-center gap-10 md:grid-cols-2">
-        <div class="text-white">
-          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">Run your entire pet business with <span class="text-cyan-300">AI superpowers</span>.</h1>
-          <p class="mt-5 text-lg md:text-xl text-slate-200/90">PawsEco combines POS, grooming/daycare services, staff scheduling, inventory, loyalty and <span class="font-semibold text-cyan-300/90">built‑in automations</span> so independents can compete with big‑budget chains. Proven in the field for <span class="font-semibold">4+ years</span> — this is our biggest upgrade yet.</p>
-          <div class="mt-8 flex flex-wrap items-center gap-4">
-            <a href="#register" class="inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-5 py-3 font-semibold text-white hover:bg-cyan-400 active:bg-cyan-600 transition ring-brand">Join the waitlist</a>
-            <a href="#features" class="inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold text-white/90 ring-1 ring-white/20 hover:bg-white/5">Explore features</a>
+        <div>
+          <span class="badge">Proven 4+ years • New major upgrade</span>
+          <h1 class="mt-4 text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">Run your pet retail & services with <span style="color:var(--brand-700)">confidence</span>.</h1>
+          <p class="mt-4 text-lg text-slate-700 max-w-2xl">All‑in‑one for independents: fast POS, grooming/daycare, forms & portals, staff rostering, digital documents, and <strong class="text-black">built‑in AI automations</strong> that save hours.</p>
+          <div class="mt-7 flex flex-wrap items-center gap-3">
+            <a href="#register" class="btn btn-primary">Join the waitlist</a>
+            <a href="#features" class="btn btn-ghost">Explore features</a>
           </div>
-          <div class="mt-6 flex flex-wrap items-center gap-6 text-slate-300/90">
-  <div class="flex items-center gap-2"><span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span> Multi‑tenant by design</div>
-  <div class="flex items-center gap-2"><span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span> AI‑assisted workflows</div>
-  <div class="flex items-center gap-2"><span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span> Automations baked in</div>
-  <div class="flex items-center gap-2"><span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span> API‑first & security‑led</div>
-</div>
+          <div class="mt-6 grid grid-cols-3 gap-4 text-sm text-slate-600">
+            <div class="card rounded-xl p-4"><div class="font-semibold">Fast checkout</div><div class="mt-1">Barcode, promos, returns.</div></div>
+            <div class="card rounded-xl p-4"><div class="font-semibold">AI assist</div><div class="mt-1">Reorders, insights, summaries.</div></div>
+            <div class="card rounded-xl p-4"><div class="font-semibold">Automations</div><div class="mt-1">Reminders, posts, reports.</div></div>
           </div>
         </div>
-        <div class="relative">
+        <div>
           <div class="card rounded-3xl p-5 shadow-soft">
-            <div class="rounded-2xl bg-slate-900 p-5">
-              <div class="grid grid-cols-2 gap-3 text-slate-200 text-sm">
-                <div class="rounded-2xl bg-slate-800 p-4">
-                  <div class="text-xs uppercase tracking-wider text-slate-400">POS</div>
-                  <div class="mt-1 font-semibold">Fast checkout</div>
-                  <ul class="mt-2 list-disc pl-5 text-slate-300/80">
-                    <li>Barcode & variants</li>
-                    <li>Discounts & promos</li>
-                    <li>Integrated payments*</li>
-                  </ul>
-                </div>
-                <div class="rounded-2xl bg-slate-800 p-4">
-                  <div class="text-xs uppercase tracking-wider text-slate-400">Services</div>
-                  <div class="mt-1 font-semibold">Grooming & daycare</div>
-                  <ul class="mt-2 list-disc pl-5 text-slate-300/80">
-                    <li>Bookings & waitlist</li>
-                    <li>Shift boards</li>
-                    <li>Pet notes & flags</li>
-                  </ul>
-                </div>
-                <div class="rounded-2xl bg-slate-800 p-4">
-                  <div class="text-xs uppercase tracking-wider text-slate-400">Operations</div>
-                  <div class="mt-1 font-semibold">Inventory & staff</div>
-                  <ul class="mt-2 list-disc pl-5 text-slate-300/80">
-                    <li>Stock & suppliers</li>
-                    <li>Roster & timesheets</li>
-                    <li>Loyalty & CRM</li>
-                  </ul>
-                </div>
-                <div class="rounded-2xl bg-slate-800 p-4">
-                  <div class="text-xs uppercase tracking-wider text-slate-400">Marketplace</div>
-                  <div class="mt-1 font-semibold">Coming soon</div>
-                  <ul class="mt-2 list-disc pl-5 text-slate-300/80">
-                    <li>Vendor portal</li>
-                    <li>Wholesale catalog</li>
-                    <li>Drop‑ship options</li>
-                  </ul>
-                </div>
-              </div>
-              <p class="mt-4 text-xs text-slate-400">*We’re exploring partners to reduce surcharges and fees.</p>
+            <div class="rounded-2xl overflow-hidden" style="background:linear-gradient(135deg,#eaf7ee,#ffffff)">
+              <img class="w-full" src="https://dummyimage.com/960x560/ffffff/1e293b&text=POS+%2B+Grooming+Board+Preview" alt="UI preview" />
             </div>
+            <p class="mt-3 text-xs text-slate-500">Representative mockups. Web & mobile ready.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Proof badge strip -->
-<section class="py-10">
-  <div class="mx-auto max-w-7xl px-5">
-    <div class="glass rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between text-slate-200 gap-4">
-      <p class="text-sm opacity-90 flex items-center gap-2"><span class="inline-flex items-center rounded-full bg-emerald-500/10 text-emerald-300 px-3 py-1 text-xs border border-emerald-400/30">Proven in the field • 4+ years</span><span class="hidden md:inline">Latest version now in early access</span></p>
-      <p class="text-sm opacity-80">Built for independent stores, groomers, daycare, dog walkers & pet sitters</p>
-    </div>
-  </div>
-</section>
-
   <!-- AI & Automations -->
-  <section id="ai" class="py-20">
-    <div class="mx-auto max-w-7xl px-5 text-white">
+  <section id="ai" class="py-16">
+    <div class="mx-auto max-w-7xl px-5">
       <div class="grid gap-10 lg:grid-cols-2 items-center">
-        <div>
-          <h2 class="text-3xl md:text-4xl font-extrabold">AI that works the floor and the back office</h2>
-          <p class="mt-3 text-slate-300/90">Give a small team the superpowers of a big one. PawsEco’s built‑in AI helps with product lookups, reorder suggestions, shift forecasting, pet safety flags, missed‑revenue alerts, and quick answers from your own data.</p>
-          <ul class="mt-6 space-y-3 text-slate-200/90">
-            <li>• <span class="font-semibold">Smart Assist</span>: ask natural‑language questions about stock, bookings, or customer history</li>
-            <li>• <span class="font-semibold">Auto‑reorder & pricing nudges</span>: reduce stockouts and protect margins</li>
-            <li>• <span class="font-semibold">Instant summaries</span>: shift handover notes, pet profiles, day‑end reports</li>
+        <div class="order-2 lg:order-1">
+          <h2 class="text-3xl md:text-4xl font-extrabold">AI that feels like an extra team member</h2>
+          <p class="mt-3 text-slate-700">Search stock by description, get reorder nudges, summarise shift notes, flag pet risks, and answer questions from your own data — all inside PawsEco.</p>
+          <ul class="mt-6 space-y-3 text-slate-800">
+            <li>• <strong>Smart Assist</strong> answers natural‑language questions.</li>
+            <li>• <strong>Auto‑reorder & pricing nudges</strong> protect margins.</li>
+            <li>• <strong>Instant summaries</strong> for day‑end and handovers.</li>
           </ul>
         </div>
-        <div class="card rounded-3xl p-6">
-          <div class="rounded-2xl bg-slate-900 p-5">
-            <div class="text-sm text-slate-400 mb-2">Teaser preview</div>
-            <div class="grid gap-3 md:grid-cols-2">
-              <img class="rounded-xl border border-white/10" src="https://dummyimage.com/640x360/0b1220/ffffff&text=POS+Screen+Preview" alt="POS preview" />
-              <img class="rounded-xl border border-white/10" src="https://dummyimage.com/640x360/0b1220/ffffff&text=Grooming+Board+Preview" alt="Grooming board preview" />
-            </div>
-            <p class="mt-3 text-xs text-slate-400">Actual UI evolves frequently — these are representative mockups. Web & mobile ready.</p>
+        <div class="order-1 lg:order-2">
+          <div class="card rounded-3xl p-6">
+            <img class="rounded-xl border border-slate-200" src="https://dummyimage.com/640x360/eaf7ee/1e293b&text=AI+Assist+Preview" alt="AI Assist" />
           </div>
         </div>
       </div>
@@ -191,208 +111,111 @@
   </section>
 
   <!-- Features -->
-  <section id="features" class="py-20">
-    <div class="mx-auto max-w-7xl px-5 text-white">
+  <section id="features" class="py-16 bg-white">
+    <div class="mx-auto max-w-7xl px-5">
       <h2 class="text-3xl md:text-4xl font-extrabold">Everything you need — plus automations that do the boring stuff</h2>
-      <p class="mt-3 text-slate-300/90 max-w-3xl">PawsEco unifies retail and services with automation flows that file reports, send reminders, chase no‑shows, segment customers, post promos, and reconcile payouts — so you can focus on pets and people.</p>
+      <p class="mt-3 text-slate-700 max-w-3xl">Unify retail and services with automation flows that file reports, send reminders, chase no‑shows, post promos, and reconcile payouts — so you can focus on pets and people.</p>
       <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <div class="card rounded-2xl p-6">
-          <h3 class="font-semibold text-lg">POS that flies</h3>
-          <p class="mt-2 text-slate-300/90">Barcode, variants, returns, discounts, and cash‑drawer flows. Works on desktop, tablet, and mobile.</p>
-        </div>
-        <div class="card rounded-2xl p-6">
-          <h3 class="font-semibold text-lg">Grooming & daycare</h3>
-          <p class="mt-2 text-slate-300/90">Shift boards, pet flags, incident notes, and check‑in/out flows to keep days smooth and safe.</p>
-        </div>
-        <div class="card rounded-2xl p-6">
-          <h3 class="font-semibold text-lg">Inventory & suppliers</h3>
-          <p class="mt-2 text-slate-300/90">SKUs, purchase orders, cost tracking, and stock‑takes with import/export friendly formats.</p>
-        </div>
-        <div class="card rounded-2xl p-6">
-          <h3 class="font-semibold text-lg">Staff & rostering</h3>
-          <p class="mt-2 text-slate-300/90">Shifts, availability, and approvals with role‑based access and audit logs.</p>
-        </div>
-        <div class="card rounded-2xl p-6">
-          <h3 class="font-semibold text-lg">Customers & loyalty</h3>
-          <p class="mt-2 text-slate-300/90">Profiles, pets, visit history, points & rewards, and targeted offers.</p>
-        </div>
-        <div class="card rounded-2xl p-6">
-          <h3 class="font-semibold text-lg">API‑first</h3>
-          <p class="mt-2 text-slate-300/90">Modern REST endpoints with tenant isolation so you can integrate safely when ready.</p>
-        </div>
+        <div class="card rounded-2xl p-6"><h3 class="font-semibold">POS that flies</h3><p class="mt-2 text-slate-700">Barcode, variants, returns, discounts — desktop, tablet, and mobile.</p></div>
+        <div class="card rounded-2xl p-6"><h3 class="font-semibold">Grooming & daycare</h3><p class="mt-2 text-slate-700">Shift boards, pet flags, incident notes, check‑in/out flows.</p></div>
+        <div class="card rounded-2xl p-6"><h3 class="font-semibold">Inventory & suppliers</h3><p class="mt-2 text-slate-700">SKUs, POs, cost tracking, stock‑takes, imports/exports.</p></div>
+        <div class="card rounded-2xl p-6"><h3 class="font-semibold">Staff & rostering</h3><p class="mt-2 text-slate-700">Shifts, availability, approvals, and audit logs.</p></div>
+        <div class="card rounded-2xl p-6"><h3 class="font-semibold">Customers & loyalty</h3><p class="mt-2 text-slate-700">Profiles, pets, visit history, points, rewards, offers.</p></div>
+        <div class="card rounded-2xl p-6"><h3 class="font-semibold">API‑first</h3><p class="mt-2 text-slate-700">Modern REST with tenant isolation to integrate safely.</p></div>
       </div>
     </div>
   </section>
 
   <!-- Forms & Portals -->
-  <section id="forms" class="py-20">
-    <div class="mx-auto max-w-7xl px-5 text-white">
+  <section id="forms" class="py-16">
+    <div class="mx-auto max-w-7xl px-5">
       <div class="grid gap-10 lg:grid-cols-2 items-center">
         <div>
           <h2 class="text-3xl md:text-4xl font-extrabold">Digital forms + customer portals</h2>
-          <p class="mt-3 text-slate-300/90">Bring the "big‑business" toolkit to independents. Collect signatures, keep records tidy, and give customers a simple portal to manage their pets.</p>
-          <ul class="mt-6 space-y-3 text-slate-200/90">
-            <li>• <span class="font-semibold">Daycare Registrations</span>: pet profiles, vaccinations, emergency contacts</li>
-            <li>• <span class="font-semibold">Grooming Terms & Acknowledgements</span>: consent, special‑care notes, incident policy</li>
-            <li>• <span class="font-semibold">Digital e‑sign & audit trail</span>: time‑stamped, exportable PDFs</li>
-            <li>• <span class="font-semibold">Customer Portal</span>: history, upcoming bookings, receipts, loyalty</li>
-            <li>• <span class="font-semibold">Document Management</span>: searchable records, tags, retention rules</li>
+          <p class="mt-3 text-slate-700">Bring the big‑business toolkit to independents. Collect signatures, keep records tidy, and give customers a simple portal to manage their pets.</p>
+          <ul class="mt-6 space-y-3 text-slate-800">
+            <li>• <strong>Daycare Registrations</strong> — pet profiles, vaccinations, emergency contacts</li>
+            <li>• <strong>Grooming Terms & Acknowledgements</strong> — consent, special‑care notes, incident policy</li>
+            <li>• <strong>Digital e‑sign & audit trails</strong> — time‑stamped, exportable PDFs</li>
+            <li>• <strong>Customer Portal</strong> — history, upcoming bookings, receipts, loyalty</li>
+            <li>• <strong>Document Management</strong> — search, tags, retention rules</li>
           </ul>
         </div>
         <div class="card rounded-3xl p-6">
-          <div class="rounded-2xl bg-slate-900 p-5">
-            <div class="text-sm text-slate-400 mb-2">Teaser preview</div>
-            <div class="grid gap-3 md:grid-cols-2">
-              <img class="rounded-xl border border-white/10" src="https://dummyimage.com/640x360/0b1220/ffffff&text=Daycare+Form+Preview" alt="Forms preview" />
-              <img class="rounded-xl border border-white/10" src="https://dummyimage.com/640x360/0b1220/ffffff&text=Customer+Portal+Preview" alt="Customer portal preview" />
-            </div>
-            <p class="mt-3 text-xs text-slate-400">Screens evolve — these mockups show the direction. Web & mobile ready.</p>
+          <div class="grid gap-3 md:grid-cols-2">
+            <img class="rounded-xl border border-slate-200" src="https://dummyimage.com/640x360/eaf7ee/1e293b&text=Daycare+Form+Preview" alt="Forms" />
+            <img class="rounded-xl border border-slate-200" src="https://dummyimage.com/640x360/eaf7ee/1e293b&text=Customer+Portal+Preview" alt="Portal" />
           </div>
+          <p class="mt-3 text-xs text-slate-500">Screens evolve — these mockups show the direction. Web & mobile ready.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Web & Mobile Ready -->
-  <section id="devices" class="py-20">
-    <div class="mx-auto max-w-7xl px-5 text-white">
+  <!-- Web & Mobile -->
+  <section id="devices" class="py-16 bg-white">
+    <div class="mx-auto max-w-7xl px-5">
       <div class="grid items-center gap-10 lg:grid-cols-2">
         <div class="order-2 lg:order-1">
           <h2 class="text-3xl md:text-4xl font-extrabold">Works wherever you work</h2>
-          <p class="mt-3 text-slate-300/90">Run PawsEco in a browser at the counter, on a tablet in the grooming room, or on your phone when you’re out walking clients’ dogs. Offline‑friendly POS and mobile‑first service screens keep you moving.</p>
-          <ul class="mt-6 space-y-3 text-slate-200/90">
+          <p class="mt-3 text-slate-700">Run PawsEco in a browser at the counter, on a tablet in the grooming room, or on your phone when you’re out walking clients’ dogs. Offline‑friendly POS and mobile‑first service screens keep you moving.</p>
+          <ul class="mt-6 space-y-3 text-slate-800">
             <li>• Web app for desktops & tablets</li>
             <li>• Mobile app roadmap for staff & owners</li>
             <li>• Kiosk‑style check‑in and self‑service options</li>
           </ul>
         </div>
-        <div class="order-1 lg:order-2">
-          <div class="grid gap-3 md:grid-cols-2">
-            <img class="rounded-xl border border-white/10" src="https://dummyimage.com/360x720/0b1220/ffffff&text=Mobile+App+Preview" alt="Mobile preview" />
-            <img class="rounded-xl border border-white/10" src="https://dummyimage.com/1024x640/0b1220/ffffff&text=Admin+Dashboard+Preview" alt="Admin preview" />
-          </div>
+        <div class="order-1 lg:order-2 grid gap-3 md:grid-cols-2">
+          <img class="rounded-xl border border-slate-200" src="https://dummyimage.com/360x720/eaf7ee/1e293b&text=Mobile+App+Preview" alt="Mobile" />
+          <img class="rounded-xl border border-slate-200" src="https://dummyimage.com/1024x640/eaf7ee/1e293b&text=Admin+Dashboard+Preview" alt="Admin" />
         </div>
       </div>
     </div>
   </section>
 
   <!-- Staff & Compliance -->
-  <section id="compliance" class="py-20">
-    <div class="mx-auto max-w-7xl px-5 text-white">
-      <div class="glass rounded-3xl p-8 md:p-10">
+  <section id="compliance" class="py-16">
+    <div class="mx-auto max-w-7xl px-5">
+      <div class="glass rounded-3xl p-8 md:p-10 shadow-soft">
         <h2 class="text-3xl md:text-4xl font-extrabold">Staff management & responsible operations</h2>
-        <p class="mt-3 text-slate-300/90 max-w-3xl">Rostering, onboarding, and training modules help your team stay organised and prepared. While pet‑care rules vary by region, PawsEco is designed to support <span class="font-semibold">clear consent, consistent procedures, incident logging, and auditable records</span> — practical tools for responsible care.</p>
+        <p class="mt-3 text-slate-700 max-w-3xl">Rostering, onboarding, and training modules help your team stay organised and prepared. While pet‑care rules vary by region, PawsEco supports <strong>clear consent, consistent procedures, incident logging, and auditable records</strong> — practical tools for responsible care.</p>
         <div class="mt-6 grid gap-6 md:grid-cols-3">
-          <div class="rounded-2xl bg-slate-900/60 p-6 border border-white/10">
-            <div class="font-semibold">Shift Rostering</div>
-            <p class="mt-2 text-slate-300/90 text-sm">Availability, swaps, approvals, and attendance with exportable logs.</p>
-          </div>
-          <div class="rounded-2xl bg-slate-900/60 p-6 border border-white/10">
-            <div class="font-semibold">Onboarding & Policies</div>
-            <p class="mt-2 text-slate-300/90 text-sm">Role checklists, digital handbooks, acceptance tracking.</p>
-          </div>
-          <div class="rounded-2xl bg-slate-900/60 p-6 border border-white/10">
-            <div class="font-semibold">OHS & Training Modules</div>
-            <p class="mt-2 text-slate-300/90 text-sm">Micro‑courses for handling, sanitation, incident response — with quizzes.</p>
-          </div>
+          <div class="rounded-2xl bg-white p-6 border border-slate-200"><div class="font-semibold">Shift Rostering</div><p class="mt-2 text-slate-700 text-sm">Availability, swaps, approvals, attendance logs.</p></div>
+          <div class="rounded-2xl bg-white p-6 border border-slate-200"><div class="font-semibold">Onboarding & Policies</div><p class="mt-2 text-slate-700 text-sm">Role checklists, handbooks, acceptance tracking.</p></div>
+          <div class="rounded-2xl bg-white p-6 border border-slate-200"><div class="font-semibold">OHS & Training</div><p class="mt-2 text-slate-700 text-sm">Micro‑courses for handling, sanitation, incident response.</p></div>
         </div>
-        <p class="mt-6 text-sm text-slate-400">We aim to be best‑in‑breed for small operators, emphasising animal wellbeing and strong record‑keeping. Features are not legal advice; please follow local regulations.</p>
+        <p class="mt-6 text-xs text-slate-500">We aim to be best‑in‑breed for small operators, emphasising animal wellbeing and strong record‑keeping. Features are not legal advice; please follow local regulations.</p>
       </div>
     </div>
   </section>
 
-  <!-- How it works -->
-  <section id="how" class="py-20">
-    <div class="mx-auto max-w-7xl px-5 text-white">
-      <h2 class="text-3xl md:text-4xl font-extrabold">How it works — fast</h2>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div class="card rounded-2xl p-6">
-          <div class="text-sm text-slate-400">01</div>
-          <h3 class="mt-1 font-semibold">Register interest</h3>
-          <p class="mt-2 text-slate-300/90">Tell us about your store(s) and what you run today. We’re onboarding early adopters in waves.</p>
-        </div>
-        <div class="card rounded-2xl p-6">
-          <div class="text-sm text-slate-400">02</div>
-          <h3 class="mt-1 font-semibold">Guided setup</h3>
-          <p class="mt-2 text-slate-300/90">We’ll help configure products, services, staff roles, and permissions. Start in staging, then go live.</p>
-        </div>
-        <div class="card rounded-2xl p-6">
-          <div class="text-sm text-slate-400">03</div>
-          <h3 class="mt-1 font-semibold">Grow with insights</h3>
-          <p class="mt-2 text-slate-300/90">Dashboards, exports, and AI‑assisted tips to reduce costs and boost repeat visits.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Who it's for -->
-  <section id="who" class="py-20">
-    <div class="mx-auto max-w-7xl px-5 text-white">
-      <h2 class="text-3xl md:text-4xl font-extrabold">Built for real‑world pet businesses — especially independents</h2>
-      <div class="mt-8 grid gap-6 md:grid-cols-3">
-        <div class="card rounded-2xl p-6">
-          <h3 class="font-semibold">Independent stores</h3>
-          <p class="mt-2 text-slate-300/90">Run retail and services from one place without enterprise bloat.</p>
-        </div>
-        <div class="card rounded-2xl p-6">
-          <h3 class="font-semibold">Grooming & daycare chains</h3>
-          <p class="mt-2 text-slate-300/90">Multi‑location scheduling, staff permissions, and consolidated reporting.</p>
-        </div>
-        <div class="card rounded-2xl p-6">
-          <h3 class="font-semibold">Omni‑channel operations</h3>
-          <p class="mt-2 text-slate-300/90">Bridge shopfront, services, and (coming soon) marketplace sales.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Security -->
-  <section id="security" class="py-20">
-    <div class="mx-auto max-w-7xl px-5 text-white">
-      <div class="glass rounded-3xl p-8 md:p-10">
-        <h2 class="text-3xl md:text-4xl font-extrabold">Security first, always</h2>
-        <p class="mt-3 text-slate-200/90 max-w-3xl">Role‑based access, audit logs, encryption in transit, and tenant isolation. We’re aligning with ISO 27001 and CIS hardening practices as we grow.</p>
-        <div class="mt-6 grid gap-4 md:grid-cols-3 text-slate-200">
-          <div class="rounded-2xl bg-slate-900/60 p-5 border border-white/10">Row‑level security (RLS)</div>
-          <div class="rounded-2xl bg-slate-900/60 p-5 border border-white/10">TLS everywhere</div>
-          <div class="rounded-2xl bg-slate-900/60 p-5 border border-white/10">Backups & staging flows</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Register interest -->
-  <section id="register" class="py-20">
-    <div class="mx-auto max-w-3xl px-5 text-white">
-      <div class="glass rounded-3xl p-8 md:p-10">
+  <!-- Register -->
+  <section id="register" class="py-16 bg-white">
+    <div class="mx-auto max-w-3xl px-5">
+      <div class="card rounded-3xl p-8 md:p-10">
         <h2 class="text-3xl md:text-4xl font-extrabold">Register your interest — early access</h2>
-        <p class="mt-2 text-slate-300/90">We’re inviting early adopters. PawsEco has been running in various forms for <span class="font-semibold">4+ years</span>; our <span class="font-semibold">latest and greatest upgrade</span> is now opening to the broader market after completing proof‑of‑concept.</p>
-        <!-- TODO: Replace action below with your form endpoint (e.g., Formspree, Netlify Forms, or your API) -->
-        <!-- Current placeholder: https://formspree.io/f/your-id - Update with real endpoint when ready -->
+        <p class="mt-2 text-slate-700">PawsEco has been running in various forms for <strong>4+ years</strong>; our <strong>latest and greatest upgrade</strong> is now opening to the broader market after completing proof‑of‑concept.</p>
         <form action="https://formspree.io/f/your-id" method="POST" class="mt-6 grid gap-4">
           <div class="grid md:grid-cols-2 gap-4">
             <div>
-              <label class="text-sm text-slate-300" for="name">Your name</label>
-              <input id="name" name="name" required placeholder="Jane Doe" class="mt-1 w-full rounded-xl border border-white/15 bg-slate-900 px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500" />
+              <label class="text-sm text-slate-600" for="name">Your name</label>
+              <input id="name" name="name" required placeholder="Jane Doe" class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand)]" />
             </div>
             <div>
-              <label class="text-sm text-slate-300" for="email">Email</label>
-              <input id="email" name="email" type="email" required placeholder="you@store.com" class="mt-1 w-full rounded-xl border border-white/15 bg-slate-900 px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500" />
+              <label class="text-sm text-slate-600" for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@store.com" class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand)]" />
             </div>
           </div>
           <div>
-            <label class="text-sm text-slate-300" for="company">Store / company</label>
-            <input id="company" name="company" placeholder="Paws Empire" class="mt-1 w-full rounded-xl border border-white/15 bg-slate-900 px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500" />
+            <label class="text-sm text-slate-600" for="company">Store / company</label>
+            <input id="company" name="company" placeholder="Paws Empire" class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand)]" />
           </div>
           <div>
-            <label class="text-sm text-slate-300" for="notes">What are you running today?</label>
-            <textarea id="notes" name="notes" rows="4" placeholder="Tell us about your POS, appointments, # of staff, and what you want to improve…" class="mt-1 w-full rounded-xl border border-white/15 bg-slate-900 px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500"></textarea>
+            <label class="text-sm text-slate-600" for="notes">What are you running today?</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Tell us about your POS, appointments, # of staff, and what you want to improve…" class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand)]"></textarea>
           </div>
-          <button type="submit" class="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-cyan-500 px-6 py-3 font-semibold text-white hover:bg-cyan-400 active:bg-cyan-600 transition">
-            Submit
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
-          </button>
-          <p class="text-xs text-slate-400">By submitting, you agree to be contacted about PawsEco. We’ll never sell your data.</p>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <p class="text-xs text-slate-500">By submitting, you agree to be contacted about PawsEco. We’ll never sell your data.</p>
         </form>
       </div>
     </div>
@@ -400,26 +223,29 @@
 
   <!-- Footer -->
   <footer class="py-10">
-    <div class="mx-auto max-w-7xl px-5 text-slate-400">
+    <div class="mx-auto max-w-7xl px-5 text-slate-600">
       <div class="glass rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <div class="flex items-center gap-3">
-          <div class="h-8 w-8 rounded-xl bg-cyan-500 grid place-items-center text-white font-black">PE</div>
+          <div class="h-8 w-8 rounded-xl grid place-items-center text-white font-black" style="background:linear-gradient(135deg,var(--brand),var(--brand-500))">PE</div>
           <div>
-            <div class="text-white font-semibold">PawsEco</div>
+            <div class="text-slate-900 font-semibold">PawsEco</div>
             <div class="text-xs">© <span id="y"></span> PawsEco. All rights reserved.</div>
           </div>
         </div>
         <div class="flex items-center gap-4 text-sm">
-          <a href="#register" class="hover:text-slate-200">Join waitlist</a>
+          <a href="#register" class="hover:text-slate-900">Join waitlist</a>
           <span class="opacity-30">•</span>
-          <a href="#security" class="hover:text-slate-200">Security</a>
+          <a href="#compliance" class="hover:text-slate-900">Responsible care</a>
           <span class="opacity-30">•</span>
-          <a href="#" class="hover:text-slate-200">Privacy</a>
+          <a href="#" class="hover:text-slate-900">Privacy</a>
         </div>
       </div>
     </div>
   </footer>
 
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":["Organization","SoftwareApplication"],"name":"PawsEco","url":"https://pawseco.com.au/","applicationCategory":"BusinessApplication","operatingSystem":"Web, Android, iOS","description":"PawsEco brings AI and powerful automations to independent pet businesses — POS, bookings, staff scheduling, inventory, loyalty, forms, portals and more."}
+  </script>
 </body>
 </html>
