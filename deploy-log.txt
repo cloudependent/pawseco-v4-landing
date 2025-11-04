@@ -84,3 +84,30 @@ Changes made:
 ✓ Preserved all existing subdomain records (admin, staging, etc.)
 
 Ready to upload to GoDaddy DNS management.
+
+=== CONFIGURATION UPDATED FOR SUBDOMAIN ===
+Date: 2025-11-05 08:05:00
+
+DECISION: Keep both sites running
+- Existing site: https://pawseco.com.au (PRESERVED)
+- New landing page: https://pawsV4.pawseco.com.au (NEW)
+
+Changes made:
+✓ Updated CNAME file: pawsV4.pawseco.com.au
+✓ Updated DNS zone file: Added pawsV4 CNAME → cloudependent.github.io
+✓ Restored apex domain A record to original IP: 184.168.99.157
+✓ Restored www CNAME to point to apex (@)
+✓ Updated sitemap.xml with subdomain URL
+✓ Updated robots.txt with subdomain URL
+✓ Updated index.html canonical and og:url tags
+✓ Updated JSON-LD structured data with subdomain URL
+✓ Updated README.md and DNS-UPDATE-SUMMARY.md
+
+DNS Record to Add:
+pawsV4  3600  IN  CNAME  cloudependent.github.io.
+
+Expected URLs:
+- New landing: https://pawsV4.pawseco.com.au
+- Existing site: https://pawseco.com.au (unchanged)
+- WWW: https://www.pawseco.com.au (unchanged, points to existing site)
+

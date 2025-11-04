@@ -1,6 +1,7 @@
 ; Domain: pawseco.com.au
-; Exported (y-m-d hh:mm:ss): 2025-11-05 07:45:00
-; Updated for GitHub Pages hosting on apex domain
+; Exported (y-m-d hh:mm:ss): 2025-11-05 08:00:00
+; Updated for GitHub Pages hosting on subdomain: pawsV4.pawseco.com.au
+; Apex domain preserved for existing website
 ;
 ; This file is intended for use for informational and archival
 ; purposes ONLY and MUST be edited before use on a production
@@ -39,11 +40,8 @@ $ORIGIN pawseco.com.au.
 					) 
 
 ; A Record
-; GitHub Pages apex domain (replaces old @ record)
-@	3600	 IN 	A	185.199.108.153
-@	3600	 IN 	A	185.199.109.153
-@	3600	 IN 	A	185.199.110.153
-@	3600	 IN 	A	185.199.111.153
+; Apex domain - RESTORED to original (existing website)
+@	10800	 IN 	A	184.168.99.157
 admin	10800	 IN 	A	184.168.99.157
 admin-staging	600	 IN 	A	170.64.141.178
 api-staging	600	 IN 	A	170.64.141.178
@@ -56,11 +54,7 @@ pos-staging	600	 IN 	A	170.64.141.178
 tenant-staging	600	 IN 	A	170.64.141.178
 vendor-staging	600	 IN 	A	170.64.141.178
 
-; AAAA Record (IPv6 for GitHub Pages)
-@	3600	 IN 	AAAA	2606:50c0:8000::153
-@	3600	 IN 	AAAA	2606:50c0:8001::153
-@	3600	 IN 	AAAA	2606:50c0:8002::153
-@	3600	 IN 	AAAA	2606:50c0:8003::153
+
 
 ; NS Record
 @	3600	 IN 	NS	ns33.domaincontrol.com.
@@ -68,10 +62,11 @@ vendor-staging	600	 IN 	A	170.64.141.178
 
 ; CNAME Record
 cpanel	10800	 IN 	CNAME	@
+pawsV4	3600	 IN 	CNAME	cloudependent.github.io.
 webdisk	10800	 IN 	CNAME	@
 webdisk.admin	10800	 IN 	CNAME	@
 whm	10800	 IN 	CNAME	@
-www	3600	 IN 	CNAME	cloudependent.github.io.
+www	10800	 IN 	CNAME	@
 www.admin	10800	 IN 	CNAME	@
 _domainconnect	3600	 IN 	CNAME	_domainconnect.gd.domaincontrol.com.
 

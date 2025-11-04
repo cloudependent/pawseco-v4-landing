@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pawseco.com.au/sitemap.xml
+Sitemap: https://pawsV4.pawseco.com.au/sitemap.xml
 

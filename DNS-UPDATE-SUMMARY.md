@@ -1,8 +1,9 @@
 # DNS Configuration Update Summary
 
-**Date**: 2025-11-05  
-**Domain**: pawseco.com.au  
-**Purpose**: Configure GitHub Pages hosting on apex domain
+**Date**: 2025-11-05
+**Domain**: pawseco.com.au
+**Subdomain**: pawsV4.pawseco.com.au
+**Purpose**: Configure GitHub Pages hosting on subdomain (preserving existing site on apex)
 
 ---
 
@@ -16,40 +17,36 @@ This file is ready to be uploaded to GoDaddy DNS management.
 
 ## 📋 Changes Made
 
-### 1. **Apex Domain (@ / pawseco.com.au)** - A Records
-**REPLACED** the old single A record with **4 GitHub Pages A records**:
+### 1. **Apex Domain (@ / pawseco.com.au)** - A Record
+**PRESERVED** - Your existing website remains on the apex domain:
 
 ```
-@  3600  IN  A  185.199.108.153
-@  3600  IN  A  185.199.109.153
-@  3600  IN  A  185.199.110.153
-@  3600  IN  A  185.199.111.153
+@  10800  IN  A  184.168.99.157
 ```
 
-**Old record removed**: `@  10800  IN  A  184.168.99.157`
+✅ **No changes to apex domain** - existing site continues to work
 
 ---
 
-### 2. **Apex Domain (@ / pawseco.com.au)** - AAAA Records (IPv6)
-**ADDED** 4 new AAAA records for IPv6 support:
+### 2. **New Subdomain (pawsV4.pawseco.com.au)** - CNAME Record
+**ADDED** new subdomain pointing to GitHub Pages:
 
 ```
-@  3600  IN  AAAA  2606:50c0:8000::153
-@  3600  IN  AAAA  2606:50c0:8001::153
-@  3600  IN  AAAA  2606:50c0:8002::153
-@  3600  IN  AAAA  2606:50c0:8003::153
+pawsV4  3600  IN  CNAME  cloudependent.github.io.
 ```
+
+This is where your new landing page will be accessible.
 
 ---
 
 ### 3. **WWW Subdomain** - CNAME Record
-**UPDATED** the www CNAME to point to GitHub Pages:
+**PRESERVED** - Points to apex domain (your existing site):
 
 ```
-www  3600  IN  CNAME  cloudependent.github.io.
+www  10800  IN  CNAME  @
 ```
 
-**Old record**: `www  10800  IN  CNAME  @`
+✅ **No changes to www** - continues to point to existing site
 
 ---
 
@@ -81,27 +78,16 @@ All existing subdomain records were **PRESERVED**:
 6. Save/Apply changes
 
 ### Option 2: Manual Entry
-If zone file import is not available, manually update these records:
-
-#### Delete:
-- Old @ A record: `184.168.99.157`
-- Old www CNAME: `@`
+If zone file import is not available, manually add this single record:
 
 #### Add:
-**A Records for @:**
-- `185.199.108.153`
-- `185.199.109.153`
-- `185.199.110.153`
-- `185.199.111.153`
+**CNAME for pawsV4:**
+- Type: `CNAME`
+- Name: `pawsV4`
+- Value: `cloudependent.github.io.`
+- TTL: `3600` (1 hour)
 
-**AAAA Records for @:**
-- `2606:50c0:8000::153`
-- `2606:50c0:8001::153`
-- `2606:50c0:8002::153`
-- `2606:50c0:8003::153`
-
-**CNAME for www:**
-- `cloudependent.github.io.`
+That's it! Just one record to add.
 
 ---
 
@@ -109,7 +95,7 @@ If zone file import is not available, manually update these records:
 
 - **Expected time**: 30-60 minutes
 - **Check propagation**: https://dnschecker.org
-- **Test domain**: pawseco.com.au
+- **Test domain**: pawsV4.pawseco.com.au
 
 ---
 
@@ -125,11 +111,12 @@ If zone file import is not available, manually update these records:
 ## ✅ Final Verification
 
 After DNS propagation and HTTPS enabled:
-- [ ] https://pawseco.com.au loads correctly
-- [ ] https://www.pawseco.com.au redirects to apex
-- [ ] HTTPS is enforced (no warnings)
+- [ ] https://pawsV4.pawseco.com.au loads the new landing page
+- [ ] https://pawseco.com.au still shows your existing website
+- [ ] https://www.pawseco.com.au still shows your existing website
+- [ ] HTTPS is enforced on pawsV4 subdomain (no warnings)
 - [ ] All staging subdomains still work
-- [ ] SEO tags are present (view page source)
+- [ ] SEO tags are present on new landing page (view page source)
 
 ---
 
