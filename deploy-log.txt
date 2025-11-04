@@ -12,3 +12,63 @@ STEP 1 - Patching index.html for SEO
 STEP 2 - Git initialization
 ✓ Git initialized with main branch
 ✓ Set repo-scoped git identity
+✓ First commit created
+
+STEP 3 - Create/connect remote repo
+✓ Repo created and remote set to SSH
+
+STEP 4 - Enable GitHub Pages + custom domain
+✓ CNAME file created and pushed
+✓ GitHub Pages enabled via API with custom domain pawseco.com.au
+
+STEP 5 - GoDaddy DNS Records
+
+--- GoDaddy DNS to set (GitHub Pages apex) ---
+A records for apex (@):
+@  A     185.199.108.153   TTL 1 hour
+@  A     185.199.109.153   TTL 1 hour
+@  A     185.199.110.153   TTL 1 hour
+@  A     185.199.111.153   TTL 1 hour
+
+AAAA (IPv6, optional but recommended):
+@  AAAA  2606:50c0:8000::153  TTL 1 hour
+@  AAAA  2606:50c0:8001::153  TTL 1 hour
+@  AAAA  2606:50c0:8002::153  TTL 1 hour
+@  AAAA  2606:50c0:8003::153  TTL 1 hour
+
+CNAME for www (vanity → apex via GitHub Pages host):
+www  CNAME  cloudependent.github.io  TTL 1 hour
+
+Notes:
+- Remove conflicting default A/AAAA/CNAME records.
+- After saving DNS, allow 30–60 minutes for propagation.
+- In GitHub Pages, enable "Enforce HTTPS" once available.
+
+
+STEP 6 - Form endpoint check
+⚠ Form endpoint is placeholder: https://formspree.io/f/your-id
+  Added TODO comment in index.html - update when ready
+
+STEP 7 - Verification Checklist
+✓ Repo exists: https://github.com/cloudependent/pawseco-v4-landing
+✓ Branch: main
+✓ index.html present at repo root
+✓ CNAME contains: pawseco.com.au
+✓ Pages Source: main / root
+⚠ DNS: Set A/AAAA/CNAME records as shown above
+⚠ Test URLs after DNS propagation:
+  - https://pawseco.com.au
+  - https://www.pawseco.com.au
+
+STEP 8 - Next Steps
+1. Go to GoDaddy DNS management for pawseco.com.au
+2. Add the A, AAAA, and CNAME records listed above
+3. Wait 30-60 minutes for DNS propagation
+4. Visit https://github.com/cloudependent/pawseco-v4-landing/settings/pages
+5. Once SSL cert is ready, enable "Enforce HTTPS"
+6. Test the live site at https://pawseco.com.au
+
+Expected Live URL: https://pawseco.com.au
+Deploy Log: c:\paws-landing\deploy-log.txt
+
+=== DEPLOYMENT COMPLETE ===
