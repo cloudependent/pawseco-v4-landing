@@ -1,0 +1,14 @@
+=== DEPLOY LOG START ===
+Date: Wed, Nov  5, 2025  7:33:41 AM
+
+STEP 0 - Preflight checks
+✓ LOCAL_DIR exists: c:\paws-landing
+✓ index.html exists
+✓ Created README.md, robots.txt, sitemap.xml, site.webmanifest, .gitignore, favicon.ico
+
+STEP 1 - Patching index.html for SEO
+✓ Added canonical link, manifest, favicon, and JSON-LD structured data to index.html
+
+STEP 2 - Git initialization
+✓ Git initialized with main branch
+✓ Set repo-scoped git identity
