@@ -72,3 +72,15 @@ Expected Live URL: https://pawseco.com.au
 Deploy Log: c:\paws-landing\deploy-log.txt
 
 === DEPLOYMENT COMPLETE ===
+
+=== DNS ZONE FILE UPDATE ===
+Date: 2025-11-05 07:45:00
+File: C:\paws-landing\pawseco.com.au (1).txt
+
+Changes made:
+✓ Updated @ A records to GitHub Pages IPs (4 records)
+✓ Added @ AAAA records for IPv6 support (4 records)
+✓ Updated www CNAME to cloudependent.github.io.
+✓ Preserved all existing subdomain records (admin, staging, etc.)
+
+Ready to upload to GoDaddy DNS management.

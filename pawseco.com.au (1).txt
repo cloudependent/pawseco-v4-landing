@@ -1,0 +1,77 @@
+; Domain: pawseco.com.au
+; Exported (y-m-d hh:mm:ss): 2025-11-05 07:45:00
+; Updated for GitHub Pages hosting on apex domain
+;
+; This file is intended for use for informational and archival
+; purposes ONLY and MUST be edited before use on a production
+; DNS server.
+;
+; In particular, you must update the SOA record with the correct
+; authoritative name server and contact e-mail address information,
+; and add the correct NS records for the name servers which will
+; be authoritative for this domain.
+;
+; For further information, please consult the BIND documentation
+; located on the following website:
+;
+; http://www.isc.org/
+;
+; And RFC 1035:
+;
+; http://www.ietf.org/rfc/rfc1035.txt
+;
+; Please note that we do NOT offer technical support for any use
+; of this zone data, the BIND name server, or any other third-
+; party DNS software.
+;
+; Use at your own risk.
+
+
+$ORIGIN pawseco.com.au.
+
+; SOA Record
+@	3600	 IN 	SOA	ns33.domaincontrol.com.	dns.jomax.net. (
+					2025102400
+					28800
+					7200
+					604800
+					3600
+					) 
+
+; A Record
+; GitHub Pages apex domain (replaces old @ record)
+@	3600	 IN 	A	185.199.108.153
+@	3600	 IN 	A	185.199.109.153
+@	3600	 IN 	A	185.199.110.153
+@	3600	 IN 	A	185.199.111.153
+admin	10800	 IN 	A	184.168.99.157
+admin-staging	600	 IN 	A	170.64.141.178
+api-staging	600	 IN 	A	170.64.141.178
+forms-staging	600	 IN 	A	170.64.141.178
+mail	10800	 IN 	A	184.168.99.157
+messaging-hub	600	 IN 	A	170.64.141.178
+paw4friends	3600	 IN 	A	209.38.83.236
+platform-staging	600	 IN 	A	170.64.141.178
+pos-staging	600	 IN 	A	170.64.141.178
+tenant-staging	600	 IN 	A	170.64.141.178
+vendor-staging	600	 IN 	A	170.64.141.178
+
+; AAAA Record (IPv6 for GitHub Pages)
+@	3600	 IN 	AAAA	2606:50c0:8000::153
+@	3600	 IN 	AAAA	2606:50c0:8001::153
+@	3600	 IN 	AAAA	2606:50c0:8002::153
+@	3600	 IN 	AAAA	2606:50c0:8003::153
+
+; NS Record
+@	3600	 IN 	NS	ns33.domaincontrol.com.
+@	3600	 IN 	NS	ns34.domaincontrol.com.
+
+; CNAME Record
+cpanel	10800	 IN 	CNAME	@
+webdisk	10800	 IN 	CNAME	@
+webdisk.admin	10800	 IN 	CNAME	@
+whm	10800	 IN 	CNAME	@
+www	3600	 IN 	CNAME	cloudependent.github.io.
+www.admin	10800	 IN 	CNAME	@
+_domainconnect	3600	 IN 	CNAME	_domainconnect.gd.domaincontrol.com.
+
