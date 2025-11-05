@@ -18,9 +18,14 @@
     :root{
       --brand:#16a34a;      /* green-600 */
       --brand-500:#22c55e;  /* green-500 */
+      --brand-400:#4ade80;  /* green-400 */
+      --accent:#0ea5e9;     /* cyan-500 (complementary) */
       --brand-700:#15803d;  /* green-700 */
       --ink:#0b1220;
       --bg:#f6f8f7;         /* light background */
+      --silver:#94a3b8;   /* slate-400 */
+      --gold:#f59e0b;     /* amber-500 */
+      --platinum:#8b5cf6; /* violet-500 */
     }
     html,body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;background:var(--bg);color:#0f172a}
     .glass{backdrop-filter:saturate(160%) blur(12px); background:rgba(255,255,255,.7); border:1px solid rgba(15,23,42,.08)}
@@ -31,11 +36,65 @@
     .btn-primary:hover{background:var(--brand-700)}
     .btn-ghost{border:1px solid rgba(15,23,42,.12)}
     .badge{display:inline-flex;align-items:center;gap:.35rem;font-size:.72rem;padding:.35rem .6rem;border-radius:999px;background:rgba(22,163,74,.1);color:var(--brand-700);border:1px solid rgba(22,163,74,.25)}
+    .badge-accent{display:inline-flex;align-items:center;gap:.35rem;font-size:.72rem;padding:.35rem .6rem;border-radius:999px;background:rgba(14,165,233,.1);color:var(--accent);border:1px solid rgba(14,165,233,.25)}
+    .badge-tier{display:inline-flex;align-items:center;gap:.35rem;font-size:.72rem;padding:.35rem .6rem;border-radius:999px}
+    .badge-silver{background:color-mix(in srgb, var(--silver) 12%, transparent);border:1px solid color-mix(in srgb, var(--silver) 30%, transparent);color:color-mix(in srgb, var(--silver) 80%, black)}
+    .badge-gold{background:color-mix(in srgb, var(--gold) 12%, transparent);border:1px solid color-mix(in srgb, var(--gold) 30%, transparent);color:color-mix(in srgb, var(--gold) 85%, black)}
+    .badge-platinum{background:color-mix(in srgb, var(--platinum) 12%, transparent);border:1px solid color-mix(in srgb, var(--platinum) 30%, transparent);color:color-mix(in srgb, var(--platinum) 85%, black)}
+    /* --- Pricing / Tiers --- */
+    .pricing{display:grid;gap:1.5rem}
+    @media(min-width:768px){.pricing{grid-template-columns:repeat(3,1fr)}}
+    .tier{position:relative;border-radius:20px;background:#fff;border:1px solid rgba(15,23,42,.08);padding:1.25rem;overflow:hidden}
+    .tier:hover{box-shadow:0 16px 40px rgba(2,6,23,.08);transform:translateY(-2px);transition:.2s ease}
+    .tier-head{display:flex;align-items:center;gap:.5rem}
+    .tier-kicker{font-size:.72rem;border-radius:999px;padding:.3rem .6rem;font-weight:600}
+    .tier-title{font-weight:700;margin-top:.35rem}
+    .tier-ribbon{position:absolute;top:14px;right:-48px;rotate:35deg;background:var(--brand-700);color:#fff;font-weight:700;font-size:.7rem;padding:.35rem 3rem;box-shadow:0 8px 20px rgba(2,6,23,.18)}
+    .tier ul{margin-top:.75rem;display:grid;gap:.5rem;color:#334155;font-size:.92rem}
+    .tier li{display:flex;gap:.5rem;align-items:flex-start}
+    .tier li svg{margin-top:.2rem;min-width:18px}
+    .tier-cta{margin-top:1rem;display:flex;gap:.5rem}
+    .tier--silver .tier-kicker{background:color-mix(in srgb, var(--silver) 15%, #fff);border:1px solid color-mix(in srgb, var(--silver) 35%, transparent);color:color-mix(in srgb, var(--silver) 80%, black)}
+    .tier--gold{border-color:color-mix(in srgb, var(--gold) 35%, transparent)}
+    .tier--gold .tier-kicker{background:color-mix(in srgb, var(--gold) 15%, #fff);border:1px solid color-mix(in srgb, var(--gold) 35%, transparent);color:#8a5a00}
+    .tier--gold .tier-title{font-size:1.05rem}
+    .tier--gold .tier-cta .btn-primary{background:var(--gold)}
+    .tier--platinum{border-width:2px;border-color:color-mix(in srgb, var(--platinum) 40%, transparent)}
+    .tier--platinum .tier-kicker{background:color-mix(in srgb, var(--platinum) 15%, #fff);border:1px solid color-mix(in srgb, var(--platinum) 35%, transparent);color:color-mix(in srgb, var(--platinum) 85%, black)}
+    .price-pill{margin-left:auto;font-size:.78rem;padding:.25rem .55rem;border-radius:999px;background:rgba(15,23,42,.04);border:1px solid rgba(15,23,42,.08);}
+  .flow{display:grid;gap:1rem}
+    .flow .lane{display:grid;grid-template-columns:1fr;gap:.75rem}
+    @media(min-width:768px){.flow .lane{grid-template-columns:repeat(7,1fr);align-items:center}}
+    .node{background:#fff;border:1px solid rgba(15,23,42,.1);border-radius:14px;padding:.6rem .75rem;text-align:center;font-weight:600}
+    .node--green{background:color-mix(in srgb,var(--brand-400) 12%, #fff);border-color:color-mix(in srgb,var(--brand-700) 25%, transparent)}
+    .node--accent{background:color-mix(in srgb,var(--accent) 10%, #fff);border-color:color-mix(in srgb,var(--accent) 25%, transparent)}
+    .arrow{height:2px;background:rgba(15,23,42,.18);border-radius:2px}
+    .legend{display:flex;gap:.6rem;flex-wrap:wrap}
+    .legend .chip{display:inline-flex;align-items:center;gap:.35rem;padding:.25rem .55rem;border-radius:999px;font-size:.72rem;border:1px solid rgba(15,23,42,.12)}
+  .pillars{display:grid;gap:1rem}
+    @media(min-width:900px){.pillars{grid-template-columns:repeat(3,1fr)}}
+    .pillar{position:relative;border-radius:20px;background:#fff;border:1px solid rgba(15,23,42,.08);padding:1.25rem}
+    .pillar:before{content:"";position:absolute;inset:0;border-radius:20px;background:linear-gradient(135deg,rgba(22,163,74,.18),rgba(22,163,74,.03));opacity:.35;pointer-events:none}
+    .pill-head{display:flex;align-items:center;gap:.7rem}
+    .pill-ico{height:36px;width:36px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--brand-700),var(--brand-400));color:#fff}
+    .pill-body{margin-top:.5rem;color:#334155}
+    .rail{margin-top:1rem;padding:1rem;border-radius:16px;background:linear-gradient(90deg,rgba(14,165,233,.08),rgba(22,163,74,.08));border:1px solid rgba(15,23,42,.06)}
+    .rail-track{display:flex;align-items:center;gap:1rem}
+    .rail-node{display:flex;align-items:center;gap:.5rem;background:#fff;border:1px solid rgba(15,23,42,.1);border-radius:999px;padding:.45rem .7rem;font-weight:600;box-shadow:0 2px 6px rgba(2,6,23,.04)}
+    .rail-icon{width:18px;height:18px;color:var(--brand-700)}
+    .rail-chip{margin-left:auto;display:inline-flex;align-items:center;gap:.4rem;font-size:.78rem;padding:.35rem .6rem;border-radius:999px;background:#fff;border:1px solid rgba(15,23,42,.12)}
+    .rail-arrow{width:22px;height:2px;border-radius:2px;background:rgba(15,23,42,.18)}
+    .rail-dot{width:24px;height:2px;border-radius:2px;background:rgba(15,23,42,.15)}
   </style>
 </head>
 <body>
   <!-- Icon sprite (Lucide-style) -->
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+    <symbol id="i-rotate" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></symbol>
+    <symbol id="i-cog" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c0 .66.39 1.26 1 1.51.33.14.69.21 1.06.21H21a2 2 0 1 1 0 4h-.09c-.37 0-.73.07-1.06.21-.61.25-1 .85-1 1.51Z"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><path d="m8.21 13.89-1.2 6.11L12 17.77l5 2.23-1.2-6.11"/></symbol>
     <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></symbol>
     <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
@@ -53,7 +112,7 @@
     <div class="mx-auto max-w-7xl px-5">
       <nav class="flex items-center justify-between py-4">
         <a href="#top" class="flex items-center gap-3 group">
-          <div class="h-9 w-9 rounded-2xl grid place-items-center text-white font-black" style="background:linear-gradient(135deg,var(--brand),var(--brand-500))">PE</div>
+          <div class="h-9 w-9 rounded-2xl grid place-items-center text-white font-black" style="background:linear-gradient(135deg,var(--brand-700),var(--brand-400))">PE</div>
           <div>
             <div class="text-xl font-extrabold tracking-tight">PawsEco</div>
             <div class="text-xs text-slate-500">POS • Services • Automations</div>
@@ -146,7 +205,7 @@
         <div class="card rounded-2xl p-6"><h3 class="font-semibold flex items-center gap-2"><svg width="18" height="18"><use href="#i-clipboard"/></svg> Inventory & suppliers</h3><p class="mt-2 text-slate-700">SKUs, POs, cost tracking, stock‑takes, imports/exports.</p></div>
         <div class="card rounded-2xl p-6"><h3 class="font-semibold flex items-center gap-2"><svg width="18" height="18"><use href="#i-calendar"/></svg> Staff & rostering</h3><p class="mt-2 text-slate-700">Shifts, availability, approvals, and audit logs.</p></div>
         <div class="card rounded-2xl p-6"><h3 class="font-semibold flex items-center gap-2"><svg width="18" height="18"><use href="#i-users"/></svg> Customers & loyalty</h3><p class="mt-2 text-slate-700">Profiles, pets, visit history, points, rewards, offers.</p></div>
-        <div class="card rounded-2xl p-6"><h3 class="font-semibold flex items-center gap-2"><svg width="18" height="18"><use href="#i-shield"/></svg> API‑first</h3><p class="mt-2 text-slate-700">Modern REST with tenant isolation to integrate safely.</p></div>
+        <div class="card rounded-2xl p-6"><h3 class="font-semibold flex items-center gap-2"><svg width="18" height="18"><use href="#i-cog"/></svg> API‑first</h3><p class="mt-2 text-slate-700">Modern REST with tenant isolation to integrate safely.</p></div>
       </div>
     </div>
   </section>
@@ -196,37 +255,68 @@
   <!-- Licensing & Analytics -->
   <section id="plans" class="py-16 bg-white">
     <div class="mx-auto max-w-7xl px-5">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="badge">Flexible</span>
+        <span class="badge-accent">Upgrade anytime</span>
+      </div>
       <h2 class="text-3xl md:text-4xl font-extrabold">Choose a plan that grows with you</h2>
-      <p class="mt-3 text-slate-700">Feature‑gated licensing keeps entry affordable and unlocks power as you expand.</p>
-      <div class="mt-8 grid gap-6 md:grid-cols-3">
-        <div class="card rounded-2xl p-6">
-          <div class="badge">Silver</div>
-          <h3 class="mt-2 font-semibold">Essentials</h3>
-          <ul class="mt-3 text-slate-700 text-sm space-y-2">
-            <li>POS, basic services</li>
-            <li>Customers & pets</li>
-            <li>Core reports</li>
+      <p class="mt-3 text-slate-700">Start lean, unlock power as you scale. All tiers include tenant isolation, TLS, JWT auth, and RLS at the database layer.</p>
+
+      <div class="mt-8 pricing">
+        <!-- Silver -->
+        <div class="tier tier--silver">
+          <div class="tier-head">
+            <div class="tier-kicker">Silver</div>
+            <div class="tier-title">Essentials</div>
+            <span class="price-pill">Best for solo ops</span>
+          </div>
+          <ul>
+            <li><svg width="18" height="18"><use href="#i-check"/></svg> POS + basic services</li>
+            <li><svg width="18" height="18"><use href="#i-check"/></svg> Customers, pets & visits</li>
+            <li><svg width="18" height="18"><use href="#i-check"/></svg> Core reports</li>
           </ul>
+          <div class="tier-cta">
+            <a href="#register" class="btn btn-ghost">Join waitlist</a>
+          </div>
         </div>
-        <div class="card rounded-2xl p-6">
-          <div class="badge">Gold</div>
-          <h3 class="mt-2 font-semibold">Scaling stores</h3>
-          <ul class="mt-3 text-slate-700 text-sm space-y-2">
-            <li>Advanced services & forms</li>
-            <li>Automations & messaging</li>
-            <li>Inventory & supplier POs</li>
+
+        <!-- Gold (featured) -->
+        <div class="tier tier--gold">
+          <div class="tier-ribbon">Most popular</div>
+          <div class="tier-head">
+            <div class="tier-kicker">Gold</div>
+            <div class="tier-title">Scaling stores</div>
+            <span class="price-pill" style="background:color-mix(in srgb, var(--gold) 12%, #fff);border-color:color-mix(in srgb, var(--gold) 35%, transparent)">Add automation</span>
+          </div>
+          <ul>
+            <li><svg width="18" height="18"><use href="#i-check"/></svg> Advanced services & forms</li>
+            <li><svg width="18" height="18"><use href="#i-check"/></svg> Automations & messaging hub</li>
+            <li><svg width="18" height="18"><use href="#i-check"/></svg> Inventory + supplier POs</li>
           </ul>
+          <div class="tier-cta">
+            <a href="#register" class="btn btn-primary">Get early access</a>
+            <a href="#features" class="btn btn-ghost">See features</a>
+          </div>
         </div>
-        <div class="card rounded-2xl p-6">
-          <div class="badge">Platinum</div>
-          <h3 class="mt-2 font-semibold">Multi‑site</h3>
-          <ul class="mt-3 text-slate-700 text-sm space-y-2">
-            <li>Multi‑location analytics</li>
-            <li>Role/tenant controls</li>
-            <li>Priority onboarding</li>
+
+        <!-- Platinum -->
+        <div class="tier tier--platinum">
+          <div class="tier-head">
+            <div class="tier-kicker">Platinum</div>
+            <div class="tier-title">Multi‑site</div>
+            <span class="price-pill" style="background:color-mix(in srgb, var(--platinum) 12%, #fff);border-color:color-mix(in srgb, var(--platinum) 35%, transparent)">For franchises</span>
+          </div>
+          <ul>
+            <li><svg width="18" height="18"><use href="#i-check"/></svg> Multi‑location analytics</li>
+            <li><svg width="18" height="18"><use href="#i-check"/></svg> Advanced role/tenant controls</li>
+            <li><svg width="18" height="18"><use href="#i-check"/></svg> Priority onboarding</li>
           </ul>
+          <div class="tier-cta">
+            <a href="#register" class="btn btn-ghost">Talk to us</a>
+          </div>
         </div>
       </div>
+
       <div class="mt-8 card rounded-2xl p-6">
         <h3 class="font-semibold flex items-center gap-2"><svg width="18" height="18"><use href="#i-clipboard"/></svg> Analytics & reporting</h3>
         <p class="mt-2 text-slate-700">Track performance by service, staff, and SKU. Export to CSV, or plug into BI via our API.</p>
@@ -255,16 +345,116 @@
     </div>
   </section>
 
+  <!-- Security & Compliance -->
+  <section id="security" class="py-16 bg-white">
+    <div class="mx-auto max-w-7xl px-5">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="badge">Security‑first</span>
+        <span class="badge-accent">Standards‑aligned</span>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-extrabold">Security & Compliance — baked in</h2>
+      <p class="mt-3 text-slate-700 max-w-3xl">PawsEco is engineered for multi‑tenant safety from the database up. We align our controls to recognised frameworks and keep responsibilities crystal‑clear for merchants and partners.</p>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="card rounded-2xl p-6">
+          <h3 class="font-semibold flex items-center gap-2"><svg width="18" height="18"><use href="#i-shield"/></svg> Tenant isolation</h3>
+          <ul class="mt-3 text-sm text-slate-700 space-y-2">
+            <li>• PostgreSQL <strong>Row‑Level Security</strong> (RLS)</li>
+            <li>• <strong>RBAC</strong> roles & fine‑grained permissions</li>
+            <li>• Per‑tenant IDs & scoped APIs</li>
+          </ul>
+        </div>
+        <div class="card rounded-2xl p-6">
+          <h3 class="font-semibold flex items-center gap-2"><svg width="18" height="18"><use href="#i-cog"/></svg> App hardening</h3>
+          <ul class="mt-3 text-sm text-slate-700 space-y-2">
+            <li>• <strong>JWT</strong> auth (short‑lived access + refresh)</li>
+            <li>• <strong>TLS</strong> everywhere; strict CORS</li>
+            <li>• <strong>Least‑privilege</strong> service configs</li>
+          </ul>
+        </div>
+        <div class="card rounded-2xl p-6">
+          <h3 class="font-semibold flex items-center gap-2"><svg width="18" height="18"><use href="#i-clipboard"/></svg> Audit & continuity</h3>
+          <ul class="mt-3 text-sm text-slate-700 space-y-2">
+            <li>• Structured <strong>audit logs</strong> for key actions</li>
+            <li>• <strong>Backups</strong> & tested restore procedures</li>
+            <li>• Error tracking & rate‑limit guards</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        <div class="rounded-2xl p-6 border border-slate-200">
+          <h3 class="font-semibold">Standards alignment (what we design for)</h3>
+          <div class="mt-3 grid grid-cols-2 gap-3 text-sm text-slate-700">
+            <div class="glass rounded-xl p-3"><span class="font-semibold">ISO 27001</span><br/>Access control, operations security, supplier management mapping.</div>
+            <div class="glass rounded-xl p-3"><span class="font-semibold">SOC 2</span><br/>Security, availability, processing integrity practices.</div>
+            <div class="glass rounded-xl p-3"><span class="font-semibold">GDPR/CCPA</span><br/>Data rights, retention, deletion requests support.</div>
+            <div class="glass rounded-xl p-3"><span class="font-semibold">PCI‑DSS aware</span><br/>Card data handled by certified processors; no raw PAN storage in PawsEco.</div>
+          </div>
+          <p class="mt-3 text-xs text-slate-500">Note: “Aligned” indicates our controls are designed to support these frameworks. Formal certification/compliance may vary by deployment and merchant obligations.</p>
+        </div>
+        <div class="rounded-2xl p-6 border border-slate-200">
+          <h3 class="font-semibold">Supply‑chain & deployment hygiene</h3>
+          <ul class="mt-3 text-sm text-slate-700 space-y-2">
+            <li>• <strong>Environment isolation</strong>: Local / Staging / Production</li>
+            <li>• <strong>Immutable builds</strong>: repeatable Docker images</li>
+            <li>• <strong>Dependency updates</strong> and vulnerability scanning</li>
+            <li>• <strong>Secrets management</strong> via per‑env variables</li>
+          </ul>
+          <div class="mt-4"><span class="badge-accent">Merchant responsibilities</span> <span class="text-sm text-slate-600">We document shared‑responsibility for payments, content, and staff policy training.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Built for reliability (from README Docker stance) -->
   <section id="reliability" class="py-16">
     <div class="mx-auto max-w-7xl px-5">
       <div class="glass rounded-3xl p-8 md:p-10 shadow-soft">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="badge">Engineered</span>
+          <span class="badge-accent">Operational maturity</span>
+        </div>
         <h2 class="text-3xl md:text-4xl font-extrabold">Reliable by design</h2>
-        <p class="mt-3 text-slate-700 max-w-3xl">We follow a production‑grade approach inspired by our engineering README: environments are isolated, builds are consistent, and rollbacks are instant.</p>
-        <div class="mt-6 grid gap-6 md:grid-cols-3 text-slate-800">
-          <div class="rounded-2xl bg-white p-6 border border-slate-200"><div class="font-semibold">Environment isolation</div><p class="mt-2 text-sm">Separate configs for Local, Staging, Production.</p></div>
-          <div class="rounded-2xl bg-white p-6 border border-slate-200"><div class="font-semibold">Consistent builds</div><p class="mt-2 text-sm">Same image runs everywhere; easy rollback.</p></div>
-          <div class="rounded-2xl bg-white p-6 border border-slate-200"><div class="font-semibold">Security first</div><p class="mt-2 text-sm">JWT auth, RLS, TLS, RBAC, and audit trails.</p></div>
+        <p class="mt-3 text-slate-700 max-w-3xl">We build like a product company: environments are isolated, builds are consistent, and rollbacks are instant. Here’s the foundation that keeps stores online and calm.</p>
+
+        <div class="mt-8 pillars">
+          <div class="pillar">
+            <div class="pill-head">
+              <div class="pill-ico"><svg width="18" height="18"><use href="#i-layers"/></svg></div>
+              <div class="font-semibold">Environment isolation</div>
+            </div>
+            <div class="pill-body text-sm">Local, Staging, and Production stay separate by config and infra. No cross‑pollination, ever.</div>
+          </div>
+          <div class="pillar">
+            <div class="pill-head">
+              <div class="pill-ico"><svg width="18" height="18"><use href="#i-cog"/></svg></div>
+              <div class="font-semibold">Immutable builds</div>
+            </div>
+            <div class="pill-body text-sm">The same Docker image runs everywhere. Predictable deployments, easy diffs, fast rollbacks.</div>
+          </div>
+          <div class="pillar">
+            <div class="pill-head">
+              <div class="pill-ico"><svg width="18" height="18"><use href="#i-shield"/></svg></div>
+              <div class="font-semibold">Security first</div>
+            </div>
+            <div class="pill-body text-sm">JWT auth, RLS, TLS, RBAC and audit trails are standard — not add‑ons.</div>
+          </div>
+        </div>
+
+        <div class="rail">
+          <div class="rail-track">
+            <div class="rail-node"><svg class="rail-icon" viewBox="0 0 24 24"><use href="#i-layers"/></svg><span>Dev</span></div>
+            <div class="rail-arrow"></div>
+            <div class="rail-node"><svg class="rail-icon" viewBox="0 0 24 24"><use href="#i-cog"/></svg><span>Build</span></div>
+            <div class="rail-arrow"></div>
+            <div class="rail-node"><svg class="rail-icon" viewBox="0 0 24 24"><use href="#i-box"/></svg><span>Registry</span></div>
+            <div class="rail-arrow"></div>
+            <div class="rail-node"><svg class="rail-icon" viewBox="0 0 24 24"><use href="#i-repeat"/></svg><span>Staging</span></div>
+            <div class="rail-arrow"></div>
+            <div class="rail-node"><svg class="rail-icon" viewBox="0 0 24 24"><use href="#i-shield"/></svg><span>Prod</span></div>
+            <span class="rail-chip"><svg width="16" height="16"><use href="#i-rotate"/></svg> One‑click rollback</span>
+          </div>
         </div>
       </div>
     </div>
@@ -318,12 +508,32 @@
     </div>
   </section>
 
+    <!-- Assurance section -->
+  <section id="assurance" class="py-16">
+    <div class="mx-auto max-w-7xl px-5">
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl p-6 shadow-soft" style="background:linear-gradient(135deg,rgba(22,163,74,.08),rgba(22,163,74,.02));border:1px solid rgba(22,163,74,.2)">
+          <div class="flex items-center gap-2 text-lg font-semibold"><svg width="20" height="20"><use href="#i-award"/></svg> Best‑in‑breed ambition</div>
+          <p class="mt-2 text-slate-700 text-sm">Enterprise patterns (RLS, RBAC, audit trails) to raise the bar for independent pet care.</p>
+        </div>
+        <div class="rounded-2xl p-6 shadow-soft" style="background:linear-gradient(135deg,rgba(14,165,233,.08),rgba(14,165,233,.02));border:1px solid rgba(14,165,233,.2)">
+          <div class="flex items-center gap-2 text-lg font-semibold" style="color:var(--accent)"><svg width="20" height="20"><use href="#i-chart"/></svg> Performance & insights</div>
+          <p class="mt-2 text-slate-700 text-sm">Analytics that show what’s working — by staff, service, and SKU — with clean exports.</p>
+        </div>
+        <div class="rounded-2xl p-6 shadow-soft" style="background:linear-gradient(135deg,rgba(22,163,74,.08),rgba(14,165,233,.05));border:1px solid rgba(15,23,42,.08)">
+          <div class="flex items-center gap-2 text-lg font-semibold"><svg width="20" height="20"><use href="#i-cog"/></svg> Operations you can trust</div>
+          <p class="mt-2 text-slate-700 text-sm">Isolated environments, consistent builds, instant rollbacks — reliability without the drama.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="py-10">
     <div class="mx-auto max-w-7xl px-5 text-slate-600">
       <div class="glass rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <div class="flex items-center gap-3">
-          <div class="h-8 w-8 rounded-xl grid place-items-center text-white font-black" style="background:linear-gradient(135deg,var(--brand),var(--brand-500))">PE</div>
+          <div class="h-8 w-8 rounded-xl grid place-items-center text-white font-black" style="background:linear-gradient(135deg,var(--brand-700),var(--brand-400))">PE</div>
           <div>
             <div class="text-slate-900 font-semibold">PawsEco</div>
             <div class="text-xs">© <span id="y"></span> PawsEco. All rights reserved.</div>
